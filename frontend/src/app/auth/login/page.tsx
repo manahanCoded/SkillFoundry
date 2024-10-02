@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import MaxWidthWrapper from "@/Components/MaxWidthWrapper";
 import Link from "next/link";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import MaxWidthWrapper from "@/Components/MaxWidthWrapper";
 
 // import types
 import authUser from "@/configure/authUser";
@@ -34,7 +35,11 @@ const Register = () => {
 
   return (
     <div className="h-screen overflow-hidden">
-        <img className=" h-screen w-screen" src="/background/BG_landingPage.jpg" alt="" />
+      <img
+        className=" h-screen w-screen select-none"
+        src="/background/BG_landingPage.jpg"
+        alt=""
+      />
       <MaxWidthWrapper>
         <div className="fixed inset-0 md:w-[70%] h-full m-auto z-10 flex justify-center items-center">
           <form
@@ -86,7 +91,17 @@ const Register = () => {
                   className="md:h-10 h-8 rounded mb-2 mt-6 px-2 bg-red-600 text-white"
                 />
               </div>
-              <Link href="/auth/register">Sign Up</Link>
+              <div className="flex justify-between items-center  ">
+                <Link href="/" className=" flex justify-center items-center group ">
+                  <span className="group-bg-slate-200 p-1 rounded mr-1 group-hover:bg-slate-300 transition">
+                    <ArrowBackIcon />
+                  </span>
+                  <p className="group-hover:border-b group-hover:text-red-600 border-red-600 transition">Go back</p>
+                </Link>
+                <Link href="/auth/register" className="w-28 p-1  bg-gray-200 hover:rounded hover:text-white hover:bg-red-600 transition text-center">
+                  Sign Up
+                </Link>
+              </div>
             </div>
           </form>
         </div>

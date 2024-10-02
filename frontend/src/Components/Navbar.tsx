@@ -26,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed inset-0 h-fit py-1 bg-white  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+    <nav className="fixed inset-0 h-fit py-1 bg-white z-50 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
       <MaxWidthWrapper>
         <div className="h-12 flex justify-between items-center">
           <div className="text-lg text-red-600 ">
